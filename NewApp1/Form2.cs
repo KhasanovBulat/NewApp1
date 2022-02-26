@@ -18,20 +18,20 @@ namespace NewApp1
             InitializeComponent();
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            string path = $"{Environment.CurrentDirectory}\\09-121.txt";
-            StreamReader reader = new StreamReader(path);
-            string[] data = reader.ReadToEnd().Split(' ');
-            int i;
-            string[] names;// массив имен из прочитанного файла
-            string[] surnames; // массив фамилий из прочитанного файла
-            for (i = 0; i < data.Length; i++)
-            {
-                dataGridView1.Rows.Add(names[i], surnames[i],09-121);
-            }
+        //private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        //{
+        //    string path = $"{Environment.CurrentDirectory}\\09-121.txt";
+        //    StreamReader reader = new StreamReader(path);
+        //    string[] data = reader.ReadToEnd().Split(' ');
+        //    int i;
+        //    string[] names;// массив имен из прочитанного файла
+        //    string[] surnames; // массив фамилий из прочитанного файла
+        //    for (i = 0; i < data.Length; i++)
+        //    {
+        //        dataGridView1.Rows.Add(names[i], surnames[i],09-121);
+        //    }
 
-        }
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {

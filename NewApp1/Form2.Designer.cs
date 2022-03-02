@@ -29,16 +29,16 @@ namespace NewApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("09-121");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("09-122");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("09-121");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("09-122");
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.MoreInfo = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Имя = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Фамилия = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Описание = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Группа = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -80,7 +80,7 @@ namespace NewApp1
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.button1);
+            this.splitContainer2.Panel2.Controls.Add(this.MoreInfo);
             this.splitContainer2.Size = new System.Drawing.Size(175, 374);
             this.splitContainer2.SplitterDistance = 192;
             this.splitContainer2.TabIndex = 0;
@@ -92,26 +92,26 @@ namespace NewApp1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeView1.Location = new System.Drawing.Point(6, 3);
             this.treeView1.Name = "treeView1";
-            treeNode3.Name = "09-121";
-            treeNode3.Text = "09-121";
-            treeNode4.Name = "09-122";
-            treeNode4.Text = "09-122";
+            treeNode1.Name = "09-121";
+            treeNode1.Text = "09-121";
+            treeNode2.Name = "09-122";
+            treeNode2.Text = "09-122";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
+            treeNode1,
+            treeNode2});
             this.treeView1.Size = new System.Drawing.Size(169, 186);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
-            // button1
+            // MoreInfo
             // 
-            this.button1.Location = new System.Drawing.Point(56, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Подробнее";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.MoreInfo.Location = new System.Drawing.Point(56, 73);
+            this.MoreInfo.Name = "MoreInfo";
+            this.MoreInfo.Size = new System.Drawing.Size(75, 23);
+            this.MoreInfo.TabIndex = 0;
+            this.MoreInfo.Text = "Подробнее";
+            this.MoreInfo.UseVisualStyleBackColor = true;
+            this.MoreInfo.Click += new System.EventHandler(this.MoreInfo_Click);
             // 
             // dataGridView1
             // 
@@ -119,11 +119,12 @@ namespace NewApp1
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Имя,
             this.Фамилия,
-            this.Описание});
+            this.Группа});
             this.dataGridView1.Location = new System.Drawing.Point(6, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(343, 400);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Имя
             // 
@@ -135,10 +136,10 @@ namespace NewApp1
             this.Фамилия.HeaderText = "Имя";
             this.Фамилия.Name = "Фамилия";
             // 
-            // Описание
+            // Группа
             // 
-            this.Описание.HeaderText = "Описание";
-            this.Описание.Name = "Описание";
+            this.Группа.HeaderText = "Группа";
+            this.Группа.Name = "Группа";
             // 
             // Form2
             // 
@@ -171,9 +172,9 @@ namespace NewApp1
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button MoreInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Имя;
         private System.Windows.Forms.DataGridViewTextBoxColumn Фамилия;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Описание;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Группа;
     }
 }
